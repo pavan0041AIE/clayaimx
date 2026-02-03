@@ -79,6 +79,85 @@ body {
             background-color: #30a1b5;
         }
         /* end tag container */
+        /* Home container*/
+    .home-container {
+        height: 86vh;
+        width: 100%;
+        padding: 4vw;
+        background-image: url("images/homepage.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+
+    }
+
+    .home-container:hover{
+        border: solid 1.5px #64ea66;
+            transition: 0.3s;
+    }
+    /* home-content style */
+        .home-content {
+        height: auto;
+        width: auto;
+        align-items: center;
+        display: inline-block;
+        padding: 10px;
+        margin: 10vh 10vw;
+        line-height: 2.5rem;
+        }
+        /* Buttons */
+        .btns {
+            width: 320px;
+            margin-top: 15px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+
+        .getbtn {
+            padding: 12px 30px;
+            background: #3cff00;
+            /* border: none; */
+            border-radius: 5px;
+            border: 1px solid #3cff00;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .leranbtn {
+            padding: 12px 30px;
+            background: transparent;
+            color: #3cff00;
+            margin-left: 15px;
+            cursor: pointer;
+            float: right;
+            border-radius: 5px;
+            border: 1px solid #3cff00;
+        }
+
+        .leranbtn:hover {
+            background: #32cd32;
+            transition: 0.3s;
+            color: black;
+            font-weight: bold;
+        }
+        .home-icon {
+            padding: 0px;
+            align-items: center;
+            text-align: center;
+        }
+        #icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+    /* end Home container */
 
 
 
