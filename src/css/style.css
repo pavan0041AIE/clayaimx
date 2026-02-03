@@ -143,40 +143,40 @@ body {
 
         }
         #programming{
-            background-image: url(programming\ language\ .jpeg);
+            background-image: url("../images/programming\ language\ .jpeg");
         }
         #dsa{
-            background-image: url(dsa.jpeg);
+            background-image: url("../images/dsa.jpeg");
         }
         #web-development{
-            background-image: url(web\ development.jpeg);
+            background-image: url("../images/web\ development.jpeg");
         }
         #ds{
-            background-image: url(data\ science.jpeg);
+            background-image: url("../images/data\ science.jpeg");
         }
         #cloud-computing{
-            background-image: url(cloud\ computing.jpeg);
+            background-image: url("../images/cloud\ computing.jpeg");
         }
         #seber-security{
-            background-image: url(cyber\ security.jpeg);
+            background-image: url("../images/cyber\ security.jpeg");
         }
         #DevOps{
-            background-image: url(devops.jpeg);
+            background-image: url("../images/devops.jpeg");
         }
         #system-design{
-            background-image: url(system\ design\ .jpeg);
+            background-image: url("../images/system\ design\ .jpeg");
         }
         #AI{
-            background-image: url(artificial\ intelligence.jpeg);
+            background-image: url("../images/artificial\ intelligence.jpeg");
         }
         #R-and-P{
-            background-image: url(Resume\ and\ Placement\ .jpeg);
+            background-image: url("../images/Resume\ and\ Placement\ .jpeg");
         }
         #R-and-I{
-            background-image: url(Research\ and\ Innovation\ .jpeg);
+            background-image: url("../images/Research\ and\ Innovation\ .jpeg");
         }
         #other-course{
-            background-image: url(other\ courses\ .jpeg);
+            background-image: url("../images/other\ courses\ .jpeg");
         }
 
         /* end course section styles */
