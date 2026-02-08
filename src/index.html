@@ -24,30 +24,87 @@
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
     <!-- header section -->
-    <!-- Header  -->
     <div class="container header_container">
+
+        <!-- Hamburger -->
+        <button id="menuToggle">☰</button>
 
         <img src="images/logo.png" alt="Logo" id="brand-logo">
 
-        <a href="#">HOME</a>
-        <a href="#">COURSES</a>
-        <a href="#">ASK AI</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">CONTACT US</a>
-        <a href="#">JOIN</a>
-        <a href="#">🔍</a>
-        <a href="#" id="language">🌐</a>
-        <a href="#">☀️</a>
+        <!-- NAV MENU -->
+        <div id="navMenu">
+            <button id="home-btn" class="lang" data-key="home">HOME</button>
+            <button id="course-btn" class="lang" data-key="courses">COURSES</button>
+            <button id="ai-btn" class="lang" data-key="askai">ASK AI</button>
+            <button id="about-btn" class="lang" data-key="about">ABOUT US</button>
+            <button id="contact-btn" class="lang" data-key="contact">CONTACT US</button>
+            <button id="join-btn" class="lang" data-key="join">JOIN US</button>
+        </div>
+
+        <!-- ICONS -->
+        <span id="header-icons">
+            <button id="searchBar">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+
+            </button>
+
+            <button id="langToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15 15 0 010 20"></path>
+                <path d="M12 2a15 15 0 000 20"></path>
+                </svg>
+            </button>
+
+
+            <button id="themeToggle">
+                <!-- Sun icon -->
+                <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg"
+                    width="22" height="22" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+
+                <!-- Moon icon -->
+                <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg"
+                    width="22" height="22" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/>
+                </svg>
+
+            </button>
+
+        </span>
+        <input type="text" id="searchInput" placeholder="Search..." />
+
 
         <img src="images/Icon.jpeg" alt="Icon" id="brand-icon">
 
     </div>
-
-
 
     <div id="fnav"> <!-- Fake Navbar  -->
         <h1> fack Navbar</h1>
@@ -57,7 +114,10 @@
 
     <!--tag container -->
     <div id="tagc">
-        <h2 id="tagline"><b>APANE SAPANE APANI BHASHA</b></h2>
+        <h2 id="tagline" class="lang" data-key="mainTagline">
+            <b>APANE SAPANE APANI BHASHA</b>
+        </h2>
+
     </div>
     <!-- end tag container -->
 
@@ -65,89 +125,179 @@
     <!-- Home container -->
     <div class="home-container">
 
-
         <div class="home-content">
             <div class="home-icon">
                 <img src="images/Icon.jpeg" alt="Brand Icon" id="icon">
                  <h1>CLAYAIMX</h1>
             </div>
-            <h4 id="tagline">Innovating the Future with AI Solutions</h4>
+            <h4 id="tagline" class="lang" data-key="heroTagline">
+                Innovating the Future with AI Solutions
+            </h4>
+
             <div class="btns">
-                <button class="getbtn">Get Started</button>
-                <button class="leranbtn">Learn More</button>
+                <button class="getbtn lang" data-key="getStarted">Get Started</button>
+                <button class="leranbtn lang" data-key="learnMore">Learn More</button>
+
             </div>
         </div>
-
-
-
     </div>
     <!-- end Home container -->
 
 
     <!-- course section -->
-    <div class="course-section">
-        <h2>COURSES</h2>
+    <div class="course-section" id="courses">
+        <h2 id="course_heading" class="lang" data-key="coursesHeading">COURSES</h2>
         <div class="course-container">
+
             <div class="row1-course">
+
                 <div class="course" id="programming">
-                    <h3>Programming</h3>
+                    <div class="course-thumbnail" id="programming-img">
+                        <h3>Programming</h3>
+
+                    </div>
+
+                    <p class="lang" data-key="programmingDesc">
+                        Learn C, C++, Java & Python from beginner to advanced.
+                    </p>
 
                 </div>
+
                 <div class="course" id="web-development">
-                    <h3>Web Development</h3>
+                    <div class="course-thumbnail" id="web-development-img">
+                         <h3>Web Development</h3>
+                    </div>
+
+                    <p class="lang" data-key="webdevDesc">
+                        Build modern responsive websites and web apps.
+                    </p>
+
                 </div>
+
                 <div class="course" id="dsa">
-                    <h3>DSA</h3>
+                    <div class="course-thumbnail" id="dsa-img">
+                        <h3>DSA</h3>
+                    </div>
+
+                    <p class="lang" data-key="dsaDesc">
+                        Master data structures and algorithms for interviews.
+                    </p>
+
                 </div>
 
                 <div class="course" id="ds">
-                    <h3>Data Science</h3>
+                    <div class="course-thumbnail" id="data-science-img">
+                        <h3>Data Science</h3>
+                    </div>
+
+                    <p class="lang" data-key="datascienceDesc">
+                        Learn data analysis, machine learning and projects.
+                    </p>
 
                 </div>
 
             </div>
+
+
             <div class="row2-course">
+
                 <div class="course" id="cloud-computing">
-                    <h3>Cloud Computing</h3>
+                    <div class="course-thumbnail" id="cloud-computing-img">
+                        <h3>Cloud Computing</h3>
+                    </div>
+
+                    <p class="lang" data-key="cloudDesc">
+                        Master AWS, Azure & cloud infrastructure.
+                    </p>
 
                 </div>
-                <div class="course" id="seber-security">
-                    <h3>Cyber Security</h3>
+
+                <div class="course" id="cybersecurity">
+                    <div class="course-thumbnail" id="cybersecurity-img">
+                        <h3>Cyber Security</h3>
+                    </div>
+
+                    <p class="lang" data-key="cyberDesc">
+                        Learn ethical hacking and security fundamentals.
+                    </p>
 
                 </div>
+
                 <div class="course" id="DevOps">
-                    <h3>DevOps</h3>
+                    <div class="course-thumbnail" id="DevOps-img">
+                        <h3>DevOps</h3>
+                    </div>
+
+                    <p class="lang" data-key="devopsDesc">
+                        CI/CD, Docker, Kubernetes and automation tools.
+                    </p>
 
                 </div>
+
                 <div class="course" id="system-design">
-                    <h3>System Design</h3>
+                    <div class="course-thumbnail" id="system-design-img">
+                        <h3>System Design</h3>
+                    </div>
+
+                    <p class="lang" data-key="systemDesc">
+                        Design scalable apps like Netflix & Instagram.
+                    </p>
 
                 </div>
 
             </div>
+
+
             <div class="row3-course">
+
                 <div class="course" id="AI">
-                    <h3>Artificial Intelligence</h3>
+                    <div class="course-thumbnail" id="AI-img">
+                        <h3>Artificial Intelligence</h3>
+                    </div>
+
+                    <p class="lang" data-key="aiDesc">
+                        Learn machine learning and AI fundamentals.
+                    </p>
 
                 </div>
+
                 <div class="course" id="R-and-P">
-                    <h3>Resume & Placement</h3>
+                    <div class="course-thumbnail" id="R-and-P-img">
+                        <h3>Resume & Placement</h3>
+                    </div>
+
+                    <p class="lang" data-key="placementDesc">
+                        Prepare for interviews and build strong resumes.
+                    </p>
 
                 </div>
+
                 <div class="course" id="R-and-I">
-                    <h3>Research & Innovation</h3>
+                    <div class="course-thumbnail" id="R-and-I-img">
+                        <h3>Research & Innovation</h3>
+                    </div>
+
+                    <p class="lang" data-key="researchDesc">
+                        Work on research projects and innovative ideas.
+                    </p>
 
                 </div>
+
                 <div class="course" id="other-course">
-                    <h3>Other Courses</h3>
+                    <div class="course-thumbnail" id="other-course-img">
+                        <h3>Other Courses</h3>
+                    </div>
+
+                    <p class="lang" data-key="otherDesc">
+                        Explore more upcoming courses and programs.
+                    </p>
 
                 </div>
 
             </div>
-
-
 
         </div>
+
 
 
     </div>
@@ -155,90 +305,85 @@
 
 
 
-    <!--About Section -->
-    <div class="about-us">
+    <!-- About Section -->
+    <div class="about-us" id="about">
 
-        <h2>ABOUT US</h2>
+        <h2 id="aboutHeading" class="lang" data-key="aboutHeading">ABOUT US</h2>
+
         <div class="about">
+
             <div class="abclayaimx">
                 <div>
-
-                <img src="images/Icon.jpeg" alt="Icon" id="brand-icon">
-                <h3>CLAYAIMX</h3>
+                    <img src="images/Icon.jpeg" alt="Icon" id="brand-icon">
+                    <h3>CLAYAIMX</h3>
                 </div>
 
-                <div >
-                    <h4>Innovation. Intelligence. Impact.</h4>
-                    <p>
-                        CLAYAIMX ek futuristic platform hai jo Education, Technology, aur AI Solutions ke ek naye daur ki shuruat kar raha hai.
-                        <br><br>
-                        Hum gyaan ki shakti ko Artificial Intelligence ki speed ke saath jod kar ek aisa ecosystem bana rahe hain jo har kisi ko aage badhne mein madad kare.
+                <div>
+                    <h4 id="aboutTagline" class="lang" data-key="aboutTagline">
+                        Innovation. Intelligence. Impact.
+                    </h4>
+
+                    <p id="aboutIntro" class="lang" data-key="aboutIntro">
+                        CLAYAIMX is a futuristic platform that is ushering in a new era of education, technology, and AI solutions.
+                        We are combining the power of knowledge with the speed of Artificial Intelligence to create an ecosystem that helps everyone move forward.
                     </p>
                 </div>
-
             </div>
+
             <div class="otherinfo">
+
                 <div class="aa">
                     <div class="mission">
-                        <h3>Our Mission</h3>
-                        <p>
-                            Hamara mission hai ki AI aur advanced technology ko har student aur professional ke liye itna saral aur asan bana diya jaye ki seekhna (learning) aur kaam karna (working) ek behtar experience ban jaye.
-                            <br><br>
-                            Hum digital tools ke madhyam se logon ko "Future-Ready" banane ke liye kaam kar rahe hain.
+                        <h3 id="missionTitle" class="lang" data-key="missionTitle">Our Mission</h3>
+                        <p id="missionText" class="lang" data-key="missionText">
+                            Our mission is to make AI and advanced technology so simple and easy for every student and professional
+                            that learning and working become a better experience.
+                            We are working to make people "Future-Ready" through digital tools.
                         </p>
                     </div>
-                    <div class="vision">
-                        <h3>Our vision</h3>
-                        <p>
-                            ​Hamara vision ek aisi duniya ka nirman karna hai jahan technology sirf ek suvidha nahi, balki har insaan ki kshamta (potential) ko badhane ka ek zariya ho.
-                            <br><br>
-                            Hum "Open Book" se milne wali seekh aur "Rising Sun" se aane wali technology ke saath duniya mein ek naya digital sawera lana chahte hain.
-                        </p>
 
+                    <div class="vision">
+                        <h3 id="visionTitle" class="lang" data-key="visionTitle">Our Vision</h3>
+                        <p id="visionText" class="lang" data-key="visionText">
+                            Our vision is to build a world where technology is not just a convenience,
+                            but a means to unlock the potential of every human being.
+                            We want to bring a new digital world with the learnings from "Open Book"
+                            and the technology from "Rising Sun."
+                        </p>
                     </div>
                 </div>
+
                 <div class="bb">
                     <div class="does">
-                        <h3>What We do</h3>
-                        <p>
-                            ​AI Solutions: Hum aise intelligent systems aur tools design karte hain jo mushkil kaamo ko automate karke aapka samay bachate hain.
-                            <br>
-                            ​Smart Education: Hum traditional education ko AI aur Tech ke saath blend karte hain taaki learning personalize aur interactive ho sake.
-                            <br>
-                            ​Next-Gen Tech: Hamara focus aise futuristic electronics aur digital products par hai jo innovation ki nayi misaal pesh karein.
+                        <h3 id="whatTitle" class="lang" data-key="whatTitle">What We Do</h3>
+                        <p id="whatText" class="lang" data-key="whatText">
+                            AI Solutions: We design intelligent systems and tools that save time by automating tasks.
+                            Smart Education: We blend traditional education with AI to make learning interactive.
+                            Next-Gen Tech: We build futuristic electronics and digital products.
                         </p>
-
                     </div>
-                    <div class="team">
-                        <h3>Our Team</h3>
-                        <p>
-                            CLAYAIMX ki taqat hamari team hai—jisne tech-experts, AI researchers, aur creative educators ka ek anokha sangam hai.
-                            <br><br>
-                            Hum sab ek hi junoon ke saath jude hain:
-                            <br><br>
-                              "Ek aisi technology banana jo insaano ke liye kaam kare, na ki insaan technology ke liye."
-                        </p>
 
+                    <div class="team">
+                        <h3 id="teamTitle" class="lang" data-key="teamTitle">Our Team</h3>
+                        <p id="teamText" class="lang" data-key="teamText">
+                            The strength of CLAYAIMX is our team — a blend of tech experts,
+                            AI researchers and creative educators.
+                            We are united by one passion:
+                            "Technology should work for humans, not humans for technology."
+                        </p>
                     </div>
                 </div>
+
             </div>
-
         </div>
+    </div>
 
-
-
-
-
-
-    </div> <!-- end about -->
-
-
-
-
+    <!-- end about -->
 
     <!-- Contact Section -->
-    <div class="contact">
-        <h2>CONTACT US</h2>
+    <div class="contact" id="contact">
+        <h2 id="ct_title" class="lang" data-key="contactHeading">CONTACT US</h2>
+
         <div class="socialmedia"> <!-- Social Media Links Container -->
 
             <div id="insta">
@@ -278,10 +423,18 @@
     </div> <!-- end contact -->
 
 
-     <!-- Footer -->
-      <footer>
-           <p>&copy; 2026 CLAYAIMX. All rights reserved.</p>
-      </footer> <!-- end footer -->
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CLAYAIMX. All rights reserved.</p>
+    </footer> <!-- end footer -->
+
+    <!-- Go to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Go to top" title="Go to top">
+        <!-- arrow SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 5l-8 8h5v6h6v-6h5l-8-8z" fill="currentColor" />
+        </svg>
+    </button>
 
 
       <script src="js/script.js"></script>
