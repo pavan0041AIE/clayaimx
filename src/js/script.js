@@ -17,26 +17,32 @@ const btn = document.getElementById("themeToggle");
 const sun = document.getElementById("sunIcon");
 const moon = document.getElementById("moonIcon");
 
-/* Load saved theme */
+
+// THEME TOGGLE SYSTEM 🌗
+const themeBtn = document.getElementById("themeToggle");
+
+// 1️⃣ Page load पर saved theme check करो
 if(localStorage.getItem("theme") === "light"){
-  document.body.classList.add("light-theme");
-  sun.style.display="none";
-  moon.style.display="block";
-}
-
-btn.onclick = () => {
-  document.body.classList.toggle("light-theme");
-
-  if(document.body.classList.contains("light-theme")){
-    localStorage.setItem("theme","light");
+    document.body.classList.add("light-theme");
     sun.style.display="none";
     moon.style.display="block";
-  }else{
-    localStorage.setItem("theme","dark");
-    sun.style.display="block";
-    moon.style.display="none";
-  }
-};
+}
+
+// 2️⃣ Button click पर theme change करो
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    // 3️⃣ Theme save करो
+    if(document.body.classList.contains("light-theme")){
+        localStorage.setItem("theme","light");
+            sun.style.display="none";
+            moon.style.display="block";
+    } else {
+        localStorage.setItem("theme","dark");
+            sun.style.display="block";
+            moon.style.display="none";
+    }
+});
 
 /* 🔍 SEARCH SYSTEM START */
 
