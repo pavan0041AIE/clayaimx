@@ -196,6 +196,9 @@ body {
             #navMenu.active{
                 display:flex;
             }
+
+
+
         /* search input base */
         #searchInput{
             right:50px;
@@ -637,9 +640,15 @@ body {
             height: 300px;
             padding: 0 4rem;
         }
+        .instantContact{
+            display:flex;
+            flex-direction: row;
 
+
+        }
         .fbform {
             flex: 1;
+
             background-color: var(--fbg);
             border-radius: 8px;
             padding: 20px;
@@ -647,6 +656,7 @@ body {
 
         .map {
             flex: 1;
+            
             background-color: var(--fbg);
             border-radius: 8px;
         }
