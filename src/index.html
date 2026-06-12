@@ -127,7 +127,7 @@
 
     </div>
     <!-- end tag container -->
-       
+
 
 
     <!-- Home container -->
@@ -445,7 +445,8 @@
         </div><!-- end socialmedia -->
         <div class="instantContact">
             <div class="fbform">
-               <form action="save_feedback.php" method="POST">
+               <form name="feedback" method="POST" data-netlify="true" action="/thank-you">
+                <input type="hidden" name="form-name" value="feedback">
 
                     <table>
 
@@ -490,7 +491,7 @@
                             <tr>
                                 <td><label for="suggestions">Any Suggestions for Improvement:</label></td>
                                 <td colspan="2" >
-                                    <textarea id="suggestions" name="suggestion" rows="4" placeholder="Your suggestions here..."></textarea>
+                                    <textarea id="suggestions" name="suggestions" rows="4" placeholder="Your suggestions here..."></textarea>
                                 </td>
                                 <td style="color: rgb(156, 200, 24);"><button type="submit" >Send Message </button></td>
 

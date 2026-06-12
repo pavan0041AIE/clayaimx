@@ -20,9 +20,9 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $experience = $_POST['experience'];
 $rating = $_POST['rating'];
-$suggestion = $_POST['suggestion'];
+$suggestion = $_POST['suggestions'];
 
-$sql = "INSERT INTO feedback (name, phone, email, experience, rating, suggestion) VALUES ('$name', '$phone', '$email', '$experience', '$rating', '$suggestion')";
+$sql = "INSERT INTO feedback (name, phone, email, experience, rating, suggestion) VALUES ('$name', '$phone', '$email', '$experience', '$rating', '$suggestions')";
 
 $result = mysqli_query($conn, $sql);
 if ($result) {
