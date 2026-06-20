@@ -295,5 +295,126 @@ backToTopBtn.addEventListener("click", ()=>{
   });
 });
 
+// FEEDBACK FORM SUBMISSION
 
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
+        const feedbackForm =
+            document.getElementById(
+                "feedbackForm"
+            );
+
+        if (!feedbackForm) {
+            return;
+        }
+
+        feedbackForm.addEventListener(
+            "submit",
+            async (e) => {
+
+                e.preventDefault();
+                const submitBtn =
+                feedbackForm.querySelector(
+                'button[type="submit"]'
+              );
+
+                const data = {
+                    name:
+                        document.getElementById(
+                            "name"
+                        ).value.trim() || null,
+
+                    email:
+                        document.getElementById(
+                            "email"
+                        ).value.trim() || null,
+
+                    rating:
+                        parseInt(
+                            document.querySelector(
+                                'input[name="rating"]:checked'
+                            ).value
+                        ),
+
+                    liked_about:
+                        document.getElementById(
+                            "liked_about"
+                        ).value,
+
+                    improvements:
+                        document.getElementById(
+                            "improvements"
+                        ).value.trim() || null
+                };
+
+                try {
+                  submitBtn.disabled = true;
+
+                  submitBtn.textContent =
+                      "Submitting...";
+
+                    await submitFeedback(
+                        data
+                    );
+
+                    document.getElementById(
+                        "feedbackMessage"
+                    ).innerHTML =
+                        "✅ Thank you for your feedback!";
+                    setTimeout(() => {
+
+                        document.getElementById(
+                            "feedbackMessage"
+                        ).innerHTML = "";
+
+                    }, 5000);
+                    feedbackForm.reset();
+                    document.getElementById(
+                        "likedCount"
+                    ).textContent =
+                        "0 / 500";
+
+                }
+
+                catch (error) {
+
+                    console.error(
+                        error
+                    );
+
+                    document.getElementById(
+                        "feedbackMessage"
+                    ).innerHTML =
+                        "❌ Unable to submit feedback. Please try again.";
+                }
+                finally {
+
+                  submitBtn.disabled = false;
+
+                  submitBtn.textContent =
+                      "Send Feedback";
+                }
+            }
+        );
+    }
+);
+const likedAbout =
+    document.getElementById(
+        "liked_about"
+    );
+
+if (likedAbout) {
+
+    likedAbout.addEventListener(
+        "input",
+        () => {
+
+            document.getElementById(
+                "likedCount"
+            ).textContent =
+                `${likedAbout.value.length} / 500`;
+        }
+    );
+}

@@ -28,6 +28,7 @@
         content="A modern tech education platform designed to help students learn everything in their own language using advanced technology.">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -445,63 +446,142 @@
         </div><!-- end socialmedia -->
         <div class="instantContact">
             <div class="fbform">
-               <form name="feedback" method="POST" data-netlify="true" >
-                <input type="hidden" name="form-name" value="feedback">
-                <input type="hidden" name="redirect" value="/thank-you.html">
+                <form  id = "feedbackForm"  name="feedback">
 
                     <table>
 
-                            <tr>
-                                <td><label for="name">Name:</label></td>
-                                <td ><input type="text" id="name" name="name" required placeholder="Name" style="width: 100%;"></td>
-                                <td><label for="phone">Phone:</label></td>
-                                <td ><input type="tel" id="phone" name="phone" placeholder="Phone Number" style="width: 100%;"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email">Email:</label></td>
-                                <td colspan="10"><input type="email" id="email" name="email" required placeholder="Email ID" style="width: 100%;"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="rating">Rate Our Courses:</label></td>
-                                <td  colspan="3" style="width: 100%;">
-                                    <input type="radio" id="star5" name="rating" value="5" >
-                                    <label for="star5">5 Stars</label>
-                                    <input type="radio" id="star4" name="rating" value="4">
-                                    <label for="star4">4 Stars</label>
-                                    <input type="radio" id="star3" name="rating" value="3">
-                                    <label for="star3">3 Stars</label>
-                                    <input type="radio" id="star2" name="rating" value="2">
-                                    <label for="star2">2 Stars</label>
-                                    <input type="radio" id="star1" name="rating" value="1">
-                                    <label for="star1">1 Star</label>
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td colspan="3">
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Optional"
+                                    style="width:100%;"
+                                >
+                            </td>
+                        </tr>
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="experience">Your Experience with CLAYAIMX:</label></td>
-                                <td colspan="4" style="width: 100%;">
-                                    <select id="experience" name="experience" required style="width: 100%;">
-                                    <option value="excellent">Excellent</option>
-                                    <option value="good">Good</option>
-                                    <option value="average">Average</option>
-                                    <option value="poor">Poor</option>
-                                    </select>
-                                </td>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td colspan="3">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Optional"
+                                    style="width:100%;"
+                                >
+                            </td>
+                        </tr>
 
-                            </tr>
-                            <tr>
-                                <td><label for="suggestions">Any Suggestions for Improvement:</label></td>
-                                <td colspan="2" >
-                                    <textarea id="suggestions" name="suggestions" rows="4" placeholder="Your suggestions here..."></textarea>
-                                </td>
-                                <td style="color: rgb(156, 200, 24);"><button type="submit" >Send Message </button></td>
+                        <tr>
+                            <td>
+                                <label for="rating">
+                                    Rate Your Experience:
+                                </label>
+                            </td>
+                            <td colspan="3">
 
-                            </tr>
+                                <div class="star-rating">
 
+                                    <input type="radio"
+                                        id="star5"
+                                        name="rating"
+                                        value="5"
+                                        required>
+
+                                    <label for="star5">★</label>
+
+
+                                    <input type="radio"
+                                        id="star4"
+                                        name="rating"
+                                        value="4">
+
+                                    <label for="star4">★</label>
+
+
+                                    <input type="radio"
+                                        id="star3"
+                                        name="rating"
+                                        value="3">
+
+                                    <label for="star3">★</label>
+
+
+                                    <input type="radio"
+                                        id="star2"
+                                        name="rating"
+                                        value="2">
+
+                                    <label for="star2">★</label>
+
+
+                                    <input type="radio"
+                                        id="star1"
+                                        name="rating"
+                                        value="1">
+
+                                    <label for="star1">★</label>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="liked_about">
+                                    What did you like about CLAYAIMX?
+                                </label>
+                            </td>
+
+                            <td colspan="3">
+                                <textarea
+                                    id="liked_about"
+                                    name="liked_about"
+                                    rows="4"
+                                    required
+                                    maxlength="500"
+                                    style="width:100%;"
+                                ></textarea>
+                                <small id="likedCount">
+                                0 / 500
+                                </small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="improvements">
+                                    What can we improve?
+                                </label>
+                            </td>
+
+                            <td colspan="2">
+                                <textarea
+                                    id="improvements"
+                                    name="improvements"
+                                    rows="4"
+                                    maxlength="500"
+                                    style="width:100%;"
+                                ></textarea>
+                            </td>
+
+                            <td>
+                                <button type="submit">
+                                    Send Feedback
+                                </button>
+                            </td>
+                        </tr>
 
                     </table>
 
                 </form>
+                <div id="feedbackMessage"></div>
             </div>
             <div class="map">
                 <iframe
@@ -528,7 +608,9 @@
         </svg>
     </button>
 
-
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/feedback.js"></script>
     <script src="js/script.js"></script>
 </body>
 

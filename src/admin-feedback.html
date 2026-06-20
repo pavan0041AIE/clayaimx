@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAYAIMX Feedback Dashboard</title>
+</head>
+
+<body>
+    <h1>
+        Feedback Dashboard
+    </h1>
+
+    <h2>
+        Total Feedbacks:
+        <span id="totalFeedbacks">
+            0
+        </span>
+    </h2>
+
+    <h2>
+        Average Rating:
+        <span id="averageRating">
+            0
+        </span>
+    </h2>
+    <h2>
+        Rating Distribution
+    </h2>
+
+    <div>
+
+        <p>
+            ⭐⭐⭐⭐⭐
+            <span id="fiveStar">
+                0
+            </span>%
+        </p>
+
+        <progress id="fiveStarBar" value="0" max="100">
+        </progress>
+
+    </div>
+    <div>
+
+        <p>
+            ⭐⭐⭐⭐
+            <span id="fourStar">
+                0
+            </span>%
+        </p>
+
+        <progress id="fourStarBar" value="0" max="100">
+        </progress>
+
+    </div>
+    <div>
+
+        <p>
+            ⭐⭐⭐
+            <span id="threeStar">
+                0
+            </span>%
+        </p>
+
+        <progress id="threeStarBar" value="0" max="100">
+        </progress>
+
+    </div>
+    <div>
+
+        <p>
+            ⭐⭐
+            <span id="twoStar">
+                0
+            </span>%
+        </p>
+
+        <progress id="twoStarBar" value="0" max="100">
+        </progress>
+
+    </div>
+    <div>
+
+        <p>
+            ⭐
+            <span id="oneStar">
+                0
+            </span>%
+        </p>
+
+        <progress id="oneStarBar" value="0" max="100">
+        </progress>
+    </div>
+    <h2>
+        Recent Feedbacks
+    </h2>
+    <input type="text" id="searchFeedback" placeholder="Search by Name...">
+    <button
+        id="exportCSV"
+    >
+
+        Export CSV
+
+    </button>
+    <label for="sortFeedback">Sort Feedbacks</label>
+    <select id="sortFeedback">
+
+        <option value="">
+            Sort Feedbacks
+        </option>
+
+        <option value="newest">
+            Newest First
+        </option>
+
+        <option value="oldest">
+            Oldest First
+        </option>
+
+        <option value="highest">
+            Highest Rating
+        </option>
+
+        <option value="lowest">
+            Lowest Rating
+        </option>
+
+    </select>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Name
+                </th>
+
+                <th>
+                    Rating
+                </th>
+
+                <th>
+                    Liked About
+                </th>
+
+                <th>
+                    Created At
+                </th>
+                <th>
+                    Actions
+                </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="feedbackTableBody">
+
+        </tbody>
+
+    </table>
+
+
+
+    <!-- Load API scripts -->
+    <script src="js/api.js"></script>
+
+    <script src="js/admin-feedback.js"></script>
+</body>
+
+</html>
